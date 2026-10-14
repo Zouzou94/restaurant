@@ -166,22 +166,3 @@ html {
 .social a:hover {
   color: white;
 }
-/* Version mobile */
-@media (max-width: 600px) {
-.navbar {
-flex-wrap: wrap;
-gap: 15px;
-padding: 15px;
-}
-
-.navbar ul {
-flex-wrap: wrap;
-gap: 12px;
-}
-
-.navbar .btn {
-display: inline-block;
-padding: 10px 15px;
-white-space: nowrap;
-}
-}
