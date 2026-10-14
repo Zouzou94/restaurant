@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>restaurant</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <h1>restoron</h1>
+        <ul>
+          <li><a href="#home" class="active">home</a></li>
+          <li><a href="#menu">menu</a></li>
+          <li><a href="#about">about</a></li>
+          <li><a href="#contact">contact</a></li>
+        </ul>
+        <a href="#contact" class="btn">book a table</a>
+      </nav>
+    </header>
+    <section id="home" class="hero">
+      <div class="hero-text">
+        <h2>
+          Delicious Food<br />
+          Good Mood
+        </h2>
+        <p>
+          enjoy the best dishes in town with fresh ingredients <br />
+          and perfect taste
+        </p>
+      </div>
+      <div class="hero-image"></div>
+    </section>
+    <section id="menu" class="menu">
+      <h2>OUR MENU</h2>
+      <div class="cards">
+        <div class="card">
+          <div class="img-box">
+            <img src="image/pizza.webp" alt="" />
+            <span class="heart">❤️</span>
+          </div>
+          <h3>pizza</h3>
+          <div class="star">⭐⭐⭐⭐⭐</div>
+          <p class="price">12$</p>
+        </div>
+        <div class="card">
+          <div class="img-box">
+            <img src="image/burger.webp" alt="" />
+            <span class="heart">❤️</span>
+          </div>
+          <h3>Beef Burger</h3>
+          <div class="star">⭐⭐⭐⭐⭐</div>
+          <p class="price">9.99$</p>
+        </div>
+        <div class="card">
+          <div class="img-box">
+            <img src="image/OIGP.jfif" alt="" />
+            <span class="heart">❤️</span>
+          </div>
+          <h3>spaghetti Bolognese</h3>
+          <div class="star">⭐⭐⭐⭐⭐</div>
+          <p class="price">11.99$</p>
+        </div>
+        <div class="card">
+          <div class="img-box">
+            <img src="image/OIP.webp" alt="" />
+            <span class="heart">❤️</span>
+          </div>
+          <h3>Sushi Set</h3>
+          <div class="star">⭐⭐⭐⭐⭐</div>
+          <p class="price">14.99$</p>
+        </div>
+      </div>
+    </section>
+    <section id="about" class="about">
+      <h2>about us</h2>
+      <p>
+        we are a premium restaurant offerting fresh meals and hight-quality
+        service since 2020
+      </p>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact & Reservation</h2>
+
+      <form id="reservationForm">
+        <input type="text" name="name" placeholder="Full Name" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <input type="date" name="date" />
+        <input type="time" name="time" required />
+
+        <textarea name="message" placeholder="your message"></textarea>
+
+        <button class="btn" type="submit">Book Now</button>
+        <p id="confirmation"></p>
+      </form>
+    </section>
+    <footer class="footer">
+      <p>© 2026 Restaurant. All rights reserved.</p>
+
+      <div class="social">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </footer>
+    <script>
+      const form = document.getElementById("reservationForm");
+      const confirmation = document.getElementById("confirmation");
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        confirmation.textContent =
+          "Your reservation request has been received!";
+
+        form.reset();
+      });
+    </script>
+  </body>
+</html>
